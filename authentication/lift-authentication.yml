@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.liftaircraft.com/llms.txt
+docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+summary:
+  types:
+  - none
+  - bearer
+  api_key_in: []
+  oauth2_flows: []
+  note: LIFT Aircraft publishes no developer REST API and no OpenAPI. The only machine
+    surface is the Wix Site MCP endpoint, whose auth model is captured below.
+schemes:
+- name: anonymous
+  type: none
+  applies_to: https://www.liftaircraft.com/_api/mcp
+  description: No authentication is required to connect to the MCP endpoint or to
+    call read-only tools. Only public information published on the site is accessible.
+  sources:
+  - llms/lift-llms.txt
+- name: visitorToken
+  type: http
+  scheme: bearer
+  applies_to: CallWixSiteAPI
+  description: A visitor access token obtained from the GenerateVisitorToken tool.
+    Must be issued into the session before any CallWixSiteAPI request is made. Scoped
+    to an anonymous visitor session, not to a user account.
+  issued_by: GenerateVisitorToken
+  sources:
+  - llms/lift-llms.txt
+  - mcp/lift-mcp.yml
