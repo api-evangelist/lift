@@ -1,20 +1,79 @@
 aid: lift
-name: LIFT
-description: LIFT is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: LIFT Aircraft
+description: LIFT Aircraft is an Austin, Texas experiential aviation company founded
+  by former Boeing engineer Matt Chasen, built around HEXA — an amphibious electric
+  vertical take-off and landing aircraft with eighteen independent electric motors
+  and propellers, a 432lb carbon fibre airframe, a triply redundant autopilot flown
+  with a single three-axis joystick, an autonomous ballistic parachute, and enough
+  redundancy to fly and land safely with up to six motors disabled. Because HEXA is
+  compliant with the FAA's powered ultralight classification, no pilot's licence is
+  required, and LIFT sells flight as a paid experience rather than selling aircraft
+  — a short training session followed by a solo flight from waterfront bases in Austin
+  and other US cities. The company has raised over $25 million from venture capital,
+  accredited investors and US government grants, has worked with the US Air Force
+  Agility Prime programme and the US Army, and has begun the FAA type certification
+  process for a commercial edition. LIFT publishes no developer REST API or OpenAPI;
+  its only machine-readable surface is a live, unauthenticated Model Context Protocol
+  endpoint and an llms.txt served by its Wix-hosted site.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://static.wixstatic.com/media/9f6a5c_257a4a5e996e4aa5bccb028fdb90388b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9f6a5c_257a4a5e996e4aa5bccb028fdb90388b%7Emv2.png
 url: https://raw.githubusercontent.com/api-evangelist/lift/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - point-nine
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-backed-by-verified: false
+x-backed-by-note: The point-nine attribution came from the VC portfolio pipeline and
+  could not be confirmed on 2026-07-19. LIFT Aircraft's own investors page names no
+  firms, citing venture capital, accredited investors and US government grants; Point
+  Nine's portfolio page returned 404. Treat this backing claim as unverified.
+x-tier: profiled
+x-tier-reason: no-developer-api-live-mcp-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Aviation
+- eVTOL
+- Electric Aircraft
+- Urban Air Mobility
+- Aerospace
+- Transportation
+- Experiential Entertainment
+- Booking
+- Model Context Protocol
+apis:
+- aid: lift:site-mcp
+  name: LIFT Aircraft Site MCP
+  description: The public Model Context Protocol endpoint served by LIFT Aircraft's
+    Wix-hosted site. Exposes nine tools that let an agent read business details, search
+    the site, read the installed Wix business-solution API docs, open an anonymous
+    visitor session, and act on a visitor's behalf — querying site data, booking a
+    flight session, or starting a purchase. No authentication is required to connect;
+    only public site information is reachable, and checkout completes on the website.
+  humanURL: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+  baseURL: https://www.liftaircraft.com/_api/mcp
+  tags:
+  - Model Context Protocol
+  - Booking
+  - Agents
+  properties:
+  - type: MCPServer
+    url: mcp/lift-mcp.yml
+  - type: Authentication
+    url: authentication/lift-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +82,24 @@ maintainers:
 common:
 - type: Website
   url: https://www.liftaircraft.com
+- type: MCPServer
+  url: mcp/lift-mcp.yml
+- type: LLMsTxt
+  url: llms/lift-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/lift-authentication.yml
+- type: DomainSecurity
+  url: security/lift-domain-security.yml
+- type: Blog
+  url: https://www.liftaircraft.com/news
+- type: Support
+  url: https://www.liftaircraft.com/faq
+- type: Pricing
+  url: https://www.liftaircraft.com/plans-pricing
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
