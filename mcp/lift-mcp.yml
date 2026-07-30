@@ -1,0 +1,59 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.liftaircraft.com/llms.txt
+status: published
+server:
+  name: lift-aircraft-site
+  title: Site Visitor Assistant for site "LIFT Aircraft"
+  version: 1.0.0
+  transport: http
+  url: https://www.liftaircraft.com/_api/mcp
+  protocol_version: '2025-06-18'
+  platform: Wix Site MCP
+  platform_docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+  authentication: none required to connect; a visitor token (GenerateVisitorToken)
+    is required before any CallWixSiteAPI request
+  scope: only public information published on the site is accessible
+capabilities:
+  tools: true
+  tools_list_changed: true
+  logging: true
+  resources: false
+  prompts: false
+verification:
+  probed: '2026-07-19'
+  initialize_status: 200
+  tools_list_status: 200
+  tool_count: 9
+tools:
+- name: GetBusinessDetails
+  description: Get business and site details for "LIFT Aircraft" such as timezone,
+    email, phone, and address.
+- name: SearchInSite
+  description: Searches the site "LIFT Aircraft" for information.
+- name: SearchSiteApiDocs
+  description: Searches for site API documentation and returns how to use the Wix
+    business solutions installed on this site.
+- name: GenerateVisitorToken
+  description: Create a new visitor session and obtain a visitor access token for the
+    site. Must be called before any CallWixSiteAPI request.
+- name: CallWixSiteAPI
+  description: Call APIs on the site to perform an action on a visitor's behalf, such
+    as querying site data, booking an appointment, or starting a purchase.
+- name: ExecuteWixAPI
+  description: Run JavaScript against the Wix REST API on the site.
+- name: BrowseWixRESTDocsMenu
+  description: Browse the Wix REST API documentation menu hierarchy.
+- name: ReadFullDocsArticle
+  description: Fetches the full Wix docs article or method article with code examples
+    for using the method.
+- name: ReadFullDocsMethodSchema
+  description: Fetches the full method schema for a given method. Should be called
+    before calling the method via CallWixSiteAPI.
+notes:
+- The MCP server is provided by the Wix platform for the site, not hand-authored by
+  LIFT Aircraft; it is nonetheless a real, live, unauthenticated agent-native surface
+  for this provider.
+- Visitor-facing capabilities advertised in llms.txt include getting business details,
+  discovering products and services, booking services and reservations, and starting
+  a purchase.

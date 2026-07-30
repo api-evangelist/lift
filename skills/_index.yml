@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: generated
+source: mcp/lift-mcp.yml
+note: Grounded in the nine tool names verified live against https://www.liftaircraft.com/_api/mcp
+  on 2026-07-19. LIFT Aircraft publishes no OpenAPI, so these skills are grounded in
+  MCP tool names rather than operationIds.
+skills:
+- file: lift-book-a-hexa-flight.md
+  name: Book a HEXA flight experience
+  api: mcp/lift-mcp.yml
+  operations:
+  - GetBusinessDetails
+  - SearchInSite
+  - SearchSiteApiDocs
+  - GenerateVisitorToken
+  - CallWixSiteAPI

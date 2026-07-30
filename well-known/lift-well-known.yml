@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: probed
+source: https://www.liftaircraft.com
+host: https://www.liftaircraft.com
+summary: No /.well-known/ discovery documents are published. The Wix-hosted site returns
+  HTTP 400 for every /.well-known/ path probed. Recorded as a negative result; no
+  WellKnown pointer is wired in apis.yml because no catalog exists.
+documents:
+- path: /.well-known/security.txt
+  status: 400
+- path: /.well-known/openid-configuration
+  status: 400
+- path: /.well-known/oauth-authorization-server
+  status: 400
+- path: /.well-known/api-catalog
+  status: 400
+- path: /.well-known/ai-plugin.json
+  status: 400
+related:
+- path: /llms.txt
+  status: 200
+  file: ../llms/lift-llms.txt
+  note: Published and harvested verbatim; advertises the site MCP endpoint.
+- path: /robots.txt
+  status: 200
+  note: Wix auto-generated; allows all agents except PetalBot, crawl-delay for dotbot
+    and AhrefsBot.
