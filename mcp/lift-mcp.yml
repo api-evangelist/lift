@@ -11,8 +11,8 @@ server:
   protocol_version: '2025-06-18'
   platform: Wix Site MCP
   platform_docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
-  authentication: none required to connect; a visitor token (GenerateVisitorToken)
-    is required before any CallWixSiteAPI request
+  authentication: none required to connect; a visitor token (GenerateVisitorToken) is required before
+    any CallWixSiteAPI request
   scope: only public information published on the site is accessible
 capabilities:
   tools: true
@@ -27,33 +27,37 @@ verification:
   tool_count: 9
 tools:
 - name: GetBusinessDetails
-  description: Get business and site details for "LIFT Aircraft" such as timezone,
-    email, phone, and address.
+  description: Get business and site details for "LIFT Aircraft" such as timezone, email, phone, and address.
 - name: SearchInSite
   description: Searches the site "LIFT Aircraft" for information.
 - name: SearchSiteApiDocs
-  description: Searches for site API documentation and returns how to use the Wix
-    business solutions installed on this site.
+  description: Searches for site API documentation and returns how to use the Wix business solutions installed
+    on this site.
 - name: GenerateVisitorToken
-  description: Create a new visitor session and obtain a visitor access token for the
-    site. Must be called before any CallWixSiteAPI request.
+  description: Create a new visitor session and obtain a visitor access token for the site. Must be called
+    before any CallWixSiteAPI request.
 - name: CallWixSiteAPI
-  description: Call APIs on the site to perform an action on a visitor's behalf, such
-    as querying site data, booking an appointment, or starting a purchase.
+  description: Call APIs on the site to perform an action on a visitor's behalf, such as querying site
+    data, booking an appointment, or starting a purchase.
 - name: ExecuteWixAPI
   description: Run JavaScript against the Wix REST API on the site.
 - name: BrowseWixRESTDocsMenu
   description: Browse the Wix REST API documentation menu hierarchy.
 - name: ReadFullDocsArticle
-  description: Fetches the full Wix docs article or method article with code examples
-    for using the method.
+  description: Fetches the full Wix docs article or method article with code examples for using the method.
 - name: ReadFullDocsMethodSchema
-  description: Fetches the full method schema for a given method. Should be called
-    before calling the method via CallWixSiteAPI.
+  description: Fetches the full method schema for a given method. Should be called before calling the
+    method via CallWixSiteAPI.
 notes:
-- The MCP server is provided by the Wix platform for the site, not hand-authored by
-  LIFT Aircraft; it is nonetheless a real, live, unauthenticated agent-native surface
-  for this provider.
-- Visitor-facing capabilities advertised in llms.txt include getting business details,
-  discovering products and services, booking services and reservations, and starting
-  a purchase.
+- The MCP server is provided by the Wix platform for the site, not hand-authored by LIFT Aircraft; it
+  is nonetheless a real, live, unauthenticated agent-native surface for this provider.
+- Visitor-facing capabilities advertised in llms.txt include getting business details, discovering products
+  and services, booking services and reservations, and starting a purchase.
+deployment:
+  mode: remote
+  endpoint: https://www.liftaircraft.com/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
