@@ -53,6 +53,17 @@ tags:
 - Transportation
 - Experiential Entertainment
 - Booking
+- MCP
+tags_raw:
+- Company
+- Aviation
+- eVTOL
+- Electric Aircraft
+- Urban Air Mobility
+- Aerospace
+- Transportation
+- Experiential Entertainment
+- Booking
 - Model Context Protocol
 apis:
 - aid: lift:site-mcp
@@ -66,6 +77,10 @@ apis:
   humanURL: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
   baseURL: https://www.liftaircraft.com/_api/mcp
   tags:
+  - MCP
+  - Booking
+  - Agents
+  tags_raw:
   - Model Context Protocol
   - Booking
   - Agents
