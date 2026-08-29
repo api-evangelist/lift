@@ -15,6 +15,17 @@ description: LIFT Aircraft is an Austin, Texas experiential aviation company fou
   process for a commercial edition. LIFT publishes no developer REST API or OpenAPI;
   its only machine-readable surface is a live, unauthenticated Model Context Protocol
   endpoint and an llms.txt served by its Wix-hosted site.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
