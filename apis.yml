@@ -28,15 +28,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://static.wixstatic.com/media/9f6a5c_257a4a5e996e4aa5bccb028fdb90388b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9f6a5c_257a4a5e996e4aa5bccb028fdb90388b%7Emv2.png
 url: https://raw.githubusercontent.com/api-evangelist/lift/refs/heads/main/apis.yml
