@@ -2,20 +2,9 @@ generated: '2026-07-19'
 method: probed
 source: https://www.liftaircraft.com
 host: https://www.liftaircraft.com
-summary: No /.well-known/ discovery documents are published. The Wix-hosted site returns
-  HTTP 400 for every /.well-known/ path probed. Recorded as a negative result; no
-  WellKnown pointer is wired in apis.yml because no catalog exists.
-documents:
-- path: /.well-known/security.txt
-  status: 400
-- path: /.well-known/openid-configuration
-  status: 400
-- path: /.well-known/oauth-authorization-server
-  status: 400
-- path: /.well-known/api-catalog
-  status: 400
-- path: /.well-known/ai-plugin.json
-  status: 400
+summary: No /.well-known/ discovery documents are published. The Wix-hosted site returns HTTP 400 for
+  every /.well-known/ path probed. Recorded as a negative result; no WellKnown pointer is wired in apis.yml
+  because no catalog exists.
 related:
 - path: /llms.txt
   status: 200
@@ -23,5 +12,22 @@ related:
   note: Published and harvested verbatim; advertises the site MCP endpoint.
 - path: /robots.txt
   status: 200
-  note: Wix auto-generated; allows all agents except PetalBot, crawl-delay for dotbot
-    and AhrefsBot.
+  note: Wix auto-generated; allows all agents except PetalBot, crawl-delay for dotbot and AhrefsBot.
+hosts:
+- host: https://www.liftaircraft.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+  - path: /.well-known/openid-configuration
+    status: 400
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+  - path: /.well-known/api-catalog
+    status: 400
+  - path: /.well-known/ai-plugin.json
+    status: 400
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
