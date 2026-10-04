@@ -101,6 +101,9 @@ apis:
     url: mcp/lift-mcp.yml
   - type: Authentication
     url: authentication/lift-authentication.yml
+  x-surface: platform-generated
+  x-platform: wix
+  x-platform-surface: site-mcp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
