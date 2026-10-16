@@ -1,0 +1,21 @@
+{
+  "repo": "lift",
+  "feeds": [
+    {
+      "source": "https://www.liftaircraft.com/news",
+      "feed_url": "https://www.liftaircraft.com/news",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.liftaircraft.com/blog-feed.xml",
+      "feed_url": "https://www.liftaircraft.com/blog-feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}
