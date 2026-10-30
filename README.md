@@ -64,12 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LIFT Aircraft is an Austin, Texas experiential aviation company built around HEXA — an amphibious electric vertical take-off and landing (eVTOL) aircraft with eighteen independent electric motors. HEXA is compliant with the FAA's powered ultralight classification, so no pilot's licence is required, and LIFT sells flight as a paid experience rather than selling aircraft.
+LIFT Aircraft is an Austin, Texas experiential aviation company founded by former Boeing engineer Matt Chasen, built around HEXA — an amphibious electric vertical take-off and landing aircraft with eighteen independent electric motors and propellers, a 432lb carbon fibre airframe, a triply redundant autopilot flown with a single three-axis joystick, an autonomous ballistic parachute, and enough redundancy to fly and land safely with up to six motors disabled. Because HEXA is compliant with the FAA's powered ultralight classification, no pilot's licence is required, and LIFT sells flight as a paid experience rather than selling aircraft — a short training session followed by a solo flight from waterfront bases in Austin and other US cities. The company has raised over $25 million from venture capital, accredited investors and US government grants, has worked with the US Air Force Agility Prime programme and the US Army, and has begun the FAA type certification process for a commercial edition. LIFT publishes no developer REST API or OpenAPI; its only machine-readable surface is a live, unauthenticated Model Context Protocol endpoint and an llms.txt served by its Wix-hosted site.
 
-LIFT publishes **no developer REST API and no OpenAPI**. Its only machine-readable surface is a live, unauthenticated Model Context Protocol endpoint served by its Wix-hosted site, plus an `llms.txt`.
+**Areas:** Company · Aviation · eVTOL · Electric Aircraft · Urban Air Mobility · Aerospace · Transportation · Experiential Entertainment · Booking · MCP
 
-- Website — https://www.liftaircraft.com
-- Site MCP endpoint — https://www.liftaircraft.com/_api/mcp (9 tools, verified live 2026-07-19)
-- llms.txt — https://www.liftaircraft.com/llms.txt
+## LIFT Aircraft on APIs.io
 
-Note: the `point-nine` backing recorded in `apis.yml` originated from the VC portfolio pipeline and is **unverified** — see `x-backed-by-note` in `apis.yml`.
+Everything profiled for LIFT Aircraft is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lift/](https://apis.io/providers/lift/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [LIFT Aircraft Site MCP](https://apis.io/apis/lift/site-mcp/) — The public Model Context Protocol endpoint served by LIFT Aircraft's Wix-hosted site. Exposes nine tools that let an agent read business details, search the…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Site Visitor Assistant for site "LIFT Aircraft](https://apis.io/servers/lift/lift-aircraft-site/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lift Authentication](https://apis.io/security/lift/lift-authentication/)
+- [Lift Domain Security](https://apis.io/security/lift/lift-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.liftaircraft.com)
+- [Pricing](https://www.liftaircraft.com/plans-pricing)
+- [Support](https://www.liftaircraft.com/faq)
+- [Blog](https://www.liftaircraft.com/news)
+
+## API Evangelist rating
+
+**Kin Score 13.3** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 20.8 |
+| Access clarity | 10.5 |
+
+**Agent readiness 5.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lift/](https://apis.io/providers/lift/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LIFT Aircraft: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lift/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
